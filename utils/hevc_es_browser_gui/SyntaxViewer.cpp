@@ -2502,7 +2502,7 @@ void SyntaxViewer::createColourRemappingInfo(std::shared_ptr<HEVC::ColourRemappi
     {
       ploop -> addChild(new QTreeWidgetItem(QStringList("pre_lut_num_val_minus1[" + QString::number(i) + "] = " + QString::number(pSei -> pre_lut_num_val_minus1[i]))));
 
-      if(pSei -> pre_lut_num_val_minus1> 0)
+      if(pSei -> pre_lut_num_val_minus1 > (void*)0)
       {
         QTreeWidgetItem *pitemIfSecond = new QTreeWidgetItem(QStringList("if( pre_lut_num_val_minus1 > 0 )"));
         ploop -> addChild(pitemIfSecond);
@@ -2550,7 +2550,7 @@ void SyntaxViewer::createColourRemappingInfo(std::shared_ptr<HEVC::ColourRemappi
     {
       ploop -> addChild(new QTreeWidgetItem(QStringList("post_lut_num_val_minus1[" + QString::number(i) + "] = " + QString::number(pSei -> post_lut_num_val_minus1[i]))));
 
-      if(pSei -> post_lut_num_val_minus1> 0)
+      if(pSei -> post_lut_num_val_minus1 > (void*)0)
       {
         QTreeWidgetItem *pitemIfSecond = new QTreeWidgetItem(QStringList("if( post_lut_num_val_minus1 > 0 )"));
         ploop -> addChild(pitemIfSecond);
